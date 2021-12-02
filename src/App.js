@@ -13,15 +13,9 @@ import { Route, Switch } from "react-router-dom";
 function App() {
   return (
     <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/rooms">
-        <Rooms />
-      </Route>
-      <Route exact path="/single-room">
-        <SingleRoom />
-      </Route>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/rooms/" component={Rooms} />
+      <Route exact path="/rooms/:slug" component={SingleRoom} />
     </Switch>
   );
 }
