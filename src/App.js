@@ -10,13 +10,19 @@ import Error from "./pages/Error";
 
 import { Route, Switch } from "react-router-dom";
 
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/rooms/" component={Rooms} />
-      <Route exact path="/rooms/:slug" component={SingleRoom} />
-    </Switch>
+    <>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/rooms/" component={Rooms} />
+        <Route exact path="/rooms/:slug" component={SingleRoom} />
+        <Route component={Error} />
+      </Switch>
+    </>
   );
 }
 
